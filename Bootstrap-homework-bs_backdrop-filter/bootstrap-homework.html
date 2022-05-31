@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    body {
+      background: url('https://picsum.photos/1920/1080/?random=1');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+
+      background-position: center;
+    }
+
+    .col:nth-child(1) {
+      display: none;
+    }
+
+    .col {
+      height: 500px;
+    }
+
+    @media(min-width: 992px) {
+      body {
+        overflow-y: hidden;
+      }
+
+      .col:nth-child(1) {
+        display: inline-block;
+      }
+
+      .col:nth-child(2) {
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      .col {
+        width: 300px;
+        height: 500px;
+        line-height: 450px;
+        /* col 內有設定間隔 (Spacing) p-4 => padding: 1.5rem */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    縮小尺寸需要的內容:
+    使用浮動在圖片上層
+    外框-白色
+    可觸碰點選 backdrop-filter 效果
+    置中對齊
+    
+  -->
+
+  <!-- .container-fluid, 所有斷點都是 width: 100% -->
+  <!-- 文字+框 -->
+  <div class="container-fluid d-flex vh-100 align-items-center">
+    <div class="row d-flex flex-column flex-lg-row flex-nowrap bd-highlight justify-content-center m-auto pt-5 pt-lg-0">
+      <div class="col bd-highlight p-4 text-center fs-6 text-white">SCROLL</div>
+      <div class="col bd-highlight p-4 text-center fs-2 border border-white text-white rounded-top">
+        backdrop-filter 效果</div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white" style="backdrop-filter:none">
+        backdrop-filter:none</div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:grayscale(1)">
+        backdrop-filter: grayscale(1)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:brightness(1.5)">
+        backdrop-filter:brightness(1.5)</div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:blur(5px)">
+        backdrop-filter: blur(5px)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:contrast(0.8)">
+        backdrop-filter:contrast(0.8)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:invert(0.7)">
+        backdrop-filter:invert(0.7)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:opacity(0.4)">
+        backdrop-filter:opacity(0.4)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:sepia(0.4)">
+        backdrop-filter: sepia(0.4)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white"
+        style="backdrop-filter:saturate(1.8)">
+        backdrop-filter:saturate(1.8)
+      </div>
+      <div class="col bd-highlight p-4 text-center fs-6 border border-white text-white rounded-bottom"
+        style="backdrop-filter:hue-rotate(120deg)">
+        backdrop-filter:hue-rotate(120deg)</div>
+    </div>
+  </div>
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
